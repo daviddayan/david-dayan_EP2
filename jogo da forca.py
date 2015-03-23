@@ -17,7 +17,7 @@ window.title("Poligonos")
 tartaruga   = turtle.Turtle()  # Cria um objeto "desenhador"
 tartaruga.speed(5)  # define a velocidade
 tartaruga.penup()       # Remova e veja o que acontece
-tartaruga.setpos(-50,0)
+tartaruga.setpos(-100,0)
 tartaruga.pendown()
 tartaruga.color("red")
 
@@ -74,6 +74,8 @@ for i in range(1):
 
 escolha = choice(linhas)
 
+
+
 tam=len(escolha)
 
 import turtle               # Usa a biblioteca de turtle graphics
@@ -84,16 +86,23 @@ window.title("Poligonos")
 tartaruga   = turtle.Turtle()  # Cria um objeto "desenhador"
 tartaruga.speed(5)  # define a velocidade
 tartaruga.penup()       # Remova e veja o que acontece
-tartaruga.setpos(45,0)
+tartaruga.setpos(0,0)
 tartaruga.pendown()
 tartaruga.color("red")
 
 dist = 15
 angulo = 0
 
-for i in range(tam):
-    tartaruga.left(angulo)  # Vira o angulo pedido
-    tartaruga.forward(dist) # Avança a distancia pedida
+for c in escolha:
+    if c!= " ":
+        tartaruga.left(angulo)  # Vira o angulo pedido
+        tartaruga.forward(dist) # Avança a distancia pedida
+    else:
+        tartaruga.penup()
+        tartaruga.left(angulo)  # Vira o angulo pedido
+        tartaruga.forward(dist) # Avança a distancia pedida
+        tartaruga.pendown()
+        
     tartaruga.penup()
     tartaruga.forward(5)
     tartaruga.pendown()
