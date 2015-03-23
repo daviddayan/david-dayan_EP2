@@ -70,30 +70,34 @@ for i in range(1):
     tartaruga.left(angulo)  # Vira o angulo pedido
     tartaruga.forward(dist) # Avança a distancia pedida
     
-window.exitonclick()
+
 
 escolha = choice(linhas)
 
 tam=len(escolha)
 
+import turtle               # Usa a biblioteca de turtle graphics
+#window = turtle.Screen()    # cria uma janela
 window.bgcolor("lightblue")
 window.title("Poligonos")
 
-tartaruga.setx(-10)
-tartaruga.sety(0)
-
-tartaruga.right(0)
+tartaruga   = turtle.Turtle()  # Cria um objeto "desenhador"
 tartaruga.speed(5)  # define a velocidade
 tartaruga.penup()       # Remova e veja o que acontece
+tartaruga.setpos(45,0)
 tartaruga.pendown()
 tartaruga.color("red")
 
-dist = 30
+dist = 15
 angulo = 0
 
-for i in range(1):
+for i in range(tam):
     tartaruga.left(angulo)  # Vira o angulo pedido
     tartaruga.forward(dist) # Avança a distancia pedida
+    tartaruga.penup()
+    tartaruga.forward(5)
+    tartaruga.pendown()
+
 
    
 # desenha os risquinhos
@@ -107,3 +111,4 @@ for i in range(1):
         # boneco completo, perdeu
 
 
+window.exitonclick()
