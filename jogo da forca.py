@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+
+
 from random import choice
 
 f = open("entrada.txt", encoding="utf-8")
@@ -119,7 +121,6 @@ p=0
 x=dist+3
 pos=p*x
 
-
 def boneco():
     if erros==1:
         tartaruga.penup()
@@ -157,9 +158,9 @@ def boneco():
         tartaruga.setpos(50,30)
         tartaruga.pendown()
         tartaruga.setpos(80,40)
-    
-erros=0
-while erros!=6:
+        
+erros=0        
+while erros < 6:               
     letra = window.textinput("letra", "escolha letra")
     if letra not in escolha:
         erros+=1
@@ -173,7 +174,7 @@ while erros!=6:
             tartaruga.write(letra)
         
         if escolha[1]==letra:
-            
+        
             tartaruga.penup()
             tartaruga.setpos(2*x,5)
             tartaruga.write(letra)
@@ -209,7 +210,7 @@ while erros!=6:
             tartaruga.write(letra)
 
         if escolha[7]==letra:
-            
+        
             tartaruga.penup()
             tartaruga.setpos(8*x,5)
             tartaruga.write(letra)
@@ -295,302 +296,6 @@ while erros!=6:
                 tartaruga.penup()
                 tartaruga.setpos(18*x,5)
                 tartaruga.write(letra)
-
-
-                
-#letra2 = window.textinput("letra 2", "escolha letra")
-#    
-#if letra2 not in escolha:
-#    erros+=1
-#    boneco()
-#else:
-#                
-#    if escolha[0]==letra2:
-#                
-#        tartaruga.penup()
-#        tartaruga.setpos(dist,5)
-#        tartaruga.write(letra2)
-#        
-#    if escolha[1]==letra2:
-#        
-#        tartaruga.penup()
-#        tartaruga.setpos(2*x,5)
-#        tartaruga.write(letra2)
-#        
-#    if escolha[2]==letra2:
-#            
-#        tartaruga.penup()
-#        tartaruga.setpos(3*x,5)
-#        tartaruga.write(letra2)
-#                
-#    if escolha[3]==letra2:
-#        
-#        tartaruga.penup()
-#        tartaruga.setpos(4*x,5)
-#        tartaruga.write(letra2)
-#
-#    if escolha[4]==letra2:
-#        
-#        tartaruga.penup()
-#        tartaruga.setpos(5*x,5)
-#        tartaruga.write(letra2)
-#        
-#    if escolha[5]==letra2:
-#                
-#        tartaruga.penup()
-#        tartaruga.setpos(6*x,5)
-#        tartaruga.write(letra2)
-#
-#    if escolha[6]==letra2:
-#        
-#        tartaruga.penup()
-#        tartaruga.setpos(7*x,5)
-#        tartaruga.write(letra2)
-#
-#    if escolha[7]==letra2:
-#        
-#        
-#        tartaruga.penup()
-#        tartaruga.setpos(8*x,5)
-#        tartaruga.write(letra2)
-#
-#    if escolha[8]==letra2:
-#        
-#        tartaruga.penup()
-#        tartaruga.setpos(9*x,5)
-#        tartaruga.write(letra2)
-#
-#    if escolha[9]==letra2:
-#        
-#        tartaruga.penup()
-#        tartaruga.setpos(pos,5)
-#        tartaruga.write(letra2)
-#    
-#            
-#        
-#    if tam>10:
-#
-#        if escolha[10]==letra2:
-#            
-#            tartaruga.penup()
-#            tartaruga.setpos(11*x,5)
-#            tartaruga.write(letra2)
-#
-#    if tam>11:
-#            
-#        if escolha[11]==letra2:
-#            
-#            tartaruga.penup()
-#            tartaruga.setpos(12*x,5)
-#            tartaruga.write(letra2)
-#     
-#
-#    if tam>12:
-#                
-#        if escolha[12]==letra2:
-#                
-#            tartaruga.penup()
-#            tartaruga.setpos(13*x,5)
-#            tartaruga.write(letra2)
-#
-#    if tam>13:
-#
-#        if escolha[13]==letra2:
-#            
-#            tartaruga.penup()
-#            tartaruga.setpos(14*x,5)
-#            tartaruga.write(letra2)
-#
-#
-#    if tam>14:    
-#                        
-#        if escolha[14]==letra2:
-#            
-#            tartaruga.penup()
-#            tartaruga.setpos(15*x,5)
-#            tartaruga.write(letra2)
-#
-#
-#    if tam>15:
-# 
-#         if escolha[15]==letra2:
-#            
-#            tartaruga.penup()
-#            tartaruga.setpos(16*x,5)
-#            tartaruga.write(letra2)
-#
-#
-#    if tam>16:
-#        if escolha[16]==letra2:
-#            
-#            tartaruga.penup()
-#            tartaruga.setpos(17*x,5)
-#            tartaruga.write(letra2)
-# 
-#
-#    if tam>17:        
-#        if escolha[17]==letra2:
-#            
-#            tartaruga.penup()
-#            tartaruga.setpos(18*x,5)
-#            tartaruga.write(letra2)
-#                    
-#letra3 = window.textinput("letra 3", "escolha letra")
-#if letra2 not in escolha:
-#    erros+=1
-#    boneco()
-#else:
-#                
-#    if escolha[0]==letra3:
-#                
-#        tartaruga.penup()
-#        tartaruga.setpos(dist,5)
-#        tartaruga.write(letra3)
-#        
-#    if escolha[1]==letra3:
-#        
-#        tartaruga.penup()
-#        tartaruga.setpos(2*x,5)
-#        tartaruga.write(letra3)
-#        
-#    if escolha[2]==letra3:
-#            
-#        tartaruga.penup()
-#        tartaruga.setpos(3*x,5)
-#        tartaruga.write(letra3)
-#                
-#    if escolha[3]==letra3:
-#        
-#        tartaruga.penup()
-#        tartaruga.setpos(4*x,5)
-#        tartaruga.write(letra3)
-#
-#                if escolha[4]==letra3:
-#        
-#                    tartaruga.penup()
-#                    tartaruga.setpos(5*x,5)
-#                    tartaruga.write(letra3)
-#        
-#                if escolha[5]==letra3:
-#        
-#                    tartaruga.penup()
-#                    tartaruga.setpos(6*x,5)
-#                    tartaruga.write(letra3)
-#
-#                if escolha[6]==letra3:
-#        
-#                    tartaruga.penup()
-#                    tartaruga.setpos(7*x,5)
-#                    tartaruga.write(letra3)
-#
-#                if escolha[7]==letra3:
-#        
-#        
-#                    tartaruga.penup()
-#                    tartaruga.setpos(8*x,5)
-#                    tartaruga.write(letra3)
-#
-#                if escolha[8]==letra3:
-#        
-#                    tartaruga.penup()
-#                    tartaruga.setpos(9*x,5)
-#                    tartaruga.write(letra3)
-#
-#                if escolha[9]==letra3:
-#        
-#                    tartaruga.penup()
-#                    tartaruga.setpos(pos,5)
-#                    tartaruga.write(letra3)
-#    
-#            
-#        
-#                if tam>10:
-#
-#                    if escolha[10]==letra3:
-#            
-#                        tartaruga.penup()
-#                        tartaruga.setpos(11*x,5)
-#                        tartaruga.write(letra3)
-#
-#
-#                if tam>11:
-#            
-#                    if escolha[11]==letra3:
-#            
-#                        tartaruga.penup()
-#                        tartaruga.setpos(12*x,5)
-#                        tartaruga.write(letra3)
-#     
-#
-#                if tam>12:
-#                
-#                    if escolha[12]==letra3:
-#                
-#                        tartaruga.penup()
-#                        tartaruga.setpos(13*x,5)
-#                        tartaruga.write(letra3)
-#
-#                if tam>13:
-#
-#                    if escolha[13]==letra3:
-#            
-#                        tartaruga.penup()
-#                        tartaruga.setpos(14*x,5)
-#                        tartaruga.write(letra3)
-#
-#
-#                if tam>14:    
-#                        
-#                    if escolha[14]==letra3:
-#            
-#                        tartaruga.penup()
-#                        tartaruga.setpos(15*x,5)
-#                        tartaruga.write(letra3)
-#
-#
-#                if tam>15:
-# 
-#                    if escolha[15]==letra3:
-#            
-#                        tartaruga.penup()
-#                        tartaruga.setpos(16*x,5)
-#                        tartaruga.write(letra3)
-#
-#
-#                if tam>16:
-#                    if escolha[16]==letra3:
-#            
-#                        tartaruga.penup()
-#                        tartaruga.setpos(17*x,5)
-#                        tartaruga.write(letra3)
-# 
-#
-#                if tam>17:        
-#                    if escolha[17]==letra3:
-#            
-#                        tartaruga.penup()
-#                        tartaruga.setpos(18*x,5)
-#                        tartaruga.write(letra3)
-
-    
-        
-
-    
-    
-    
-window.exitonclick()       
-
-        
-# desenha os risquinhos
-
-# repetição
-
-# Pede letra para o usuário
-    # se acertou, desenha a letra turtle.write
-        # se palavra commpleta, acertou
-    # Se errou, desenha mais uma parte do boneco
-        # boneco completo, perdeu
-
 
 
 window.exitonclick()
