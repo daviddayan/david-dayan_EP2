@@ -173,10 +173,10 @@ while len(n)>0:
     while erros < 6 and acertos < tam-esp:
         #if acertos < tam-esp:
             letra = window.textinput("letra", "escolha letra")
-            letra.upper()
+            #letra=letra.upper()
             while letra in l:
                 letra = window.textinput("letra", "escolha letra")
-                letra.upper()
+                #letra=letra.upper()
             l.append(letra)
             tentativas+=1
             #pos=escolha.index(letra)
@@ -197,7 +197,7 @@ while len(n)>0:
             else:
                 
                 if escolha[0]==letra:
-                
+                    
                     tartaruga.penup()
                     tartaruga.setpos(x/3,-11)
                     tartaruga.write(letra)
@@ -353,8 +353,11 @@ while len(n)>0:
                         tartaruga.setpos((x/2)+398,-11)
                         tartaruga.write(letra)
                         acertos+=1
-    #t=[]
-    #t.append(tentativas)   
+    t=[]
+    t.append(tentativas)
+    soma=0
+    for i in range(len(t)):
+        soma+=t[i]
     if acertos==tam-esp:
         tartaruga.penup()
         tartaruga.color("black")
@@ -370,7 +373,7 @@ tartaruga.penup()
 tartaruga.setpos(-200,70)
 tartaruga.write("voce acertou:",font=("Arial",26,"normal"))
 tartaruga.penup()
-tartaruga.setpos(300,70)
+tartaruga.setpos(250,70)
 tartaruga.write(acertos,font=("Arial",26,"normal"))
 tartaruga.penup()
 tartaruga.setpos(-200,35)
@@ -383,7 +386,7 @@ tartaruga.setpos(-200,0)
 tartaruga.write("chutes por palavra certa:",font=("Arial",26,"normal"))
 tartaruga.penup()
 tartaruga.setpos(250,0)
-tartaruga.write(tentativas/acertos,font=("Arial",26,"normal"))
+tartaruga.write(soma/acertos,font=("Arial",26,"normal"))
 
     
 
