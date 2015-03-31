@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
-
-
 from random import choice
-
+import time
 f = open("entrada.txt", encoding="utf-8")
 
 linhas = f. readlines()
@@ -166,17 +164,52 @@ while len(n)>0:
             tartaruga.setpos(50,30)
             tartaruga.pendown()
             tartaruga.setpos(80,0)
+            
+    def desenhar_letra():
+        n=0
+        for i in range(len(escolha)):
+            if letra == escolha[i]:
+                tartaruga.penup()
+                tartaruga.setpos((0+(i*20)),-10)
+                tartaruga.pendown()
+                tartaruga.write(letra , font = ('Arial',14,'normal'))
+                n+=1
+            if letra == "A" and escolha[i] == "Ã" or escolha[i]=="Â" :
+                tartaruga.penup()
+                tartaruga.setpos((0+(i*20)),-10)
+                tartaruga.pendown()
+                tartaruga.write(escolha[i] , font = ('Arial',14,'normal'))
+                n+=1
+            if letra == "E" and escolha[i] == 'É' or escolha[i]=='Ê':
+                tartaruga.penup()
+                tartaruga.setpos((0+(i*20)),-10)
+                tartaruga.pendown()
+                tartaruga.write(escolha[i] , font = ('Arial',14,'normal'))
+                n+=1
+            if letra == 'O' and escolha[i] == 'Ó' or escolha[i]=='Ô':
+                tartaruga.penup()
+                tartaruga.setpos((0+(i*20)),-10)
+                tartaruga.pendown()
+                tartaruga.write(escolha[i] , font = ('Arial',14,'normal'))
+                n+=1
+            if letra == 'I' and escolha[i] == 'Í':
+                tartaruga.penup()
+                tartaruga.setpos((0+(i*20)),-10)
+                tartaruga.pendown()
+                tartaruga.write(escolha[i] , font = ('Arial',14,'normal'))
+                n+=1
+        return n
     l=[]
     esp=escolha.count(" ")
     tentativas=0
-    #print(esp)        
+    escolha=escolha.upper()        
     while erros < 6 and acertos < tam-esp:
         #if acertos < tam-esp:
             letra = window.textinput("letra", "escolha letra")
-            #letra=letra.upper()
+            letra=letra.upper()
             while letra in l:
                 letra = window.textinput("letra", "escolha letra")
-                #letra=letra.upper()
+                letra=letra.upper()
             l.append(letra)
             tentativas+=1
             #pos=escolha.index(letra)
@@ -195,164 +228,8 @@ while len(n)>0:
                 tartaruga.color("red")
                 boneco()
             else:
-                
-                if escolha[0]==letra:
-                    
-                    tartaruga.penup()
-                    tartaruga.setpos(x/3,-11)
-                    tartaruga.write(letra)
-                    acertos+=1
-                if escolha[1]==letra:
-                
-                    tartaruga.penup()
-                    tartaruga.setpos((x/2)+x+2,-11)
-                    tartaruga.write(letra)
-                    acertos+=1
-                if escolha[2]==letra:
-                    
-                    tartaruga.penup()
-                    tartaruga.setpos((x/2)+38,-11)
-                    tartaruga.write(letra)
-                    acertos+=1    
-                if escolha[3]==letra:
-                
-                    tartaruga.penup()
-                    tartaruga.setpos((x/2)+58,-11)
-                    tartaruga.write(letra)
-                    acertos+=1
-                if escolha[4]==letra:
-                
-                    tartaruga.penup()
-                    tartaruga.setpos((x/2)+78,-11)
-                    tartaruga.write(letra)
-                    acertos+=1
-                if escolha[5]==letra:
-                
-                    tartaruga.penup()
-                    tartaruga.setpos((x/2)+98,-11)
-                    tartaruga.write(letra)
-                    acertos+=1
-                if escolha[6]==letra:
-                    
-                    tartaruga.penup()
-                    tartaruga.setpos((x/2)+118,-11)
-                    tartaruga.write(letra)
-                    acertos+=1
-                if tam>7:
-                    
-                    if escolha[7]==letra:
-                
-                        tartaruga.penup()
-                        tartaruga.setpos((x/2)+138,-11)
-                        tartaruga.write(letra)
-                        acertos+=1
-                if tam>8:
-                    
-                    if escolha[8]==letra:
-                
-                        tartaruga.penup()
-                        tartaruga.setpos((x/2)+158,-11)
-                        tartaruga.write(letra)
-                        acertos+=1
-                if tam>9:
-        
-                    if escolha[9]==letra:
-                
-                        tartaruga.penup()
-                        tartaruga.setpos((x/2)+178,-11)
-                        tartaruga.write(letra)
-                        acertos+=1
-                if tam>10:
-        
-                    if escolha[10]==letra:
-                        
-                        tartaruga.penup()
-                        tartaruga.setpos((x/2)+198,-11)
-                        tartaruga.write(letra)
-                        acertos+=1
-                       
-                if tam>11:
-                    
-                    if escolha[11]==letra:
-                    
-                        tartaruga.penup()
-                        tartaruga.setpos((x/2)+218,-11)
-                        tartaruga.write(letra)
-                        acertos+=1
-        
-                if tam>12:
-                            
-                    if escolha[12]==letra:
-                        
-                        tartaruga.penup()
-                        tartaruga.setpos((x/2)+238,-11)
-                        tartaruga.write(letra)
-                        acertos+=1
-        
-                if tam>13:
-        
-                    if escolha[13]==letra:
-                    
-                        tartaruga.penup()
-                        tartaruga.setpos((x/2)+258,-11)
-                        tartaruga.write(letra)
-                        acertos+=1
-        
-                if tam>14:    
-                                
-                    if escolha[14]==letra:
-                
-                        tartaruga.penup()
-                        tartaruga.setpos((x/2)+278,-11)
-                        tartaruga.write(letra)
-                        acertos+=1
-        
-                if tam>15:
-         
-                     if escolha[15]==letra:
-                    
-                        tartaruga.penup()
-                        tartaruga.setpos((x/2)+298,-11)
-                        tartaruga.write(letra)
-                        acertos+=1
-        
-                if tam>16:
-                    if escolha[16]==letra:
-                    
-                    
-                        tartaruga.penup()
-                        tartaruga.setpos((x/2)+318,-11)
-                        tartaruga.write(letra)
-                        acertos+=1
-        
-                if tam>17:        
-                    if escolha[17]==letra:
-                    
-                        tartaruga.penup()
-                        tartaruga.setpos((x/2)+338,-11)
-                        tartaruga.write(letra)
-                        acertos+=1
-                if tam>18:        
-                    if escolha[18]==letra:
-                    
-                        tartaruga.penup()
-                        tartaruga.setpos((x/2)+358,-11)
-                        tartaruga.write(letra)
-                        acertos+=1       
-                if tam>19:        
-                    if escolha[19]==letra:
-                    
-                        tartaruga.penup()
-                        tartaruga.setpos((x/2)+378,-11)
-                        tartaruga.write(letra)
-                        acertos+=1
-                if tam>20:        
-                    if escolha[20]==letra:
-                    
-                        tartaruga.penup()
-                        tartaruga.setpos((x/2)+398,-11)
-                        tartaruga.write(letra)
-                        acertos+=1
+                acertos+=desenhar_letra()
+
     t=[]
     t.append(tentativas)
     soma=0
@@ -363,11 +240,13 @@ while len(n)>0:
         tartaruga.color("black")
         tartaruga.setpos(85,120)
         tartaruga.write("PARABENS! VOCE ACERTOU A PALAVRA!")
+        time.sleep(4)
     if erros==6:
         tartaruga.penup()
         tartaruga.color("black")
         tartaruga.setpos(85,120)
         tartaruga.write("VOCE ERROU A A PALAVRA E ESTA ENFORCADO!")
+        time.sleep(4)
 window.clear()
 tartaruga.penup()
 tartaruga.setpos(-200,70)
@@ -392,3 +271,8 @@ tartaruga.write(soma/acertos,font=("Arial",26,"normal"))
 
 
 window.exitonclick()
+
+
+
+
+
