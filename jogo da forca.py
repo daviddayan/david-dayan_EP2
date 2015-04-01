@@ -200,6 +200,9 @@ while len(n)>0:
                 n+=1
         return n
     l=[]
+    Q=("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    lista=list(Q)
+    
     esp=escolha.count(" ")
     tentativas=0
     escolha=escolha.upper()        
@@ -208,6 +211,9 @@ while len(n)>0:
             letra = window.textinput("letra", "escolha letra")
             letra=letra.upper()
             while letra in l:
+                letra = window.textinput("letra", "escolha letra")
+                letra=letra.upper()
+            while letra not in lista:
                 letra = window.textinput("letra", "escolha letra")
                 letra=letra.upper()
             l.append(letra)
